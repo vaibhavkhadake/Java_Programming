@@ -1,0 +1,33 @@
+/******************************************************************************
+ *  
+ *  Purpose: A program with cubic running time. Read in N integers and counts the
+		     number of triples that sum to exactly 0.
+ *  @author  Vaibhav P Khadake
+ *  @version 1.0
+ *  @since   23-08-2019
+ *
+ ******************************************************************************/
+package com.bridgelabzs.functional;
+import com.bridgelabzs.utility.Utility;
+
+public class Cubic_Running {
+
+	public static void main(String[] args)
+	{
+		int arr[], number;
+		
+		System.out.println("Enter number of elements ");
+		number=Utility.integerInput();
+		arr = new int[number];
+		
+		System.out.println("Enter elements in array ");
+		for(int i=0;i<number;i++)
+		{
+			arr[i]=Utility.integerInput();
+		}
+		Utility.distinctTriplet(arr,number);
+	
+	}
+	
+	
+}

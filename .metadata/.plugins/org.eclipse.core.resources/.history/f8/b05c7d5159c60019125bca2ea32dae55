@@ -1,0 +1,19 @@
+package com.bridgelabzs.functional;
+
+import com.bridgelabzs.utility.Utility;
+
+public class CoupanNumber {
+
+	public static void main(String[] args)
+	{
+		int number;
+		
+		System.out.println("Enter new number :");
+		number = Utility.integerInput();
+		Utility.compute(number);
+		
+	}
+
+	
+
+}

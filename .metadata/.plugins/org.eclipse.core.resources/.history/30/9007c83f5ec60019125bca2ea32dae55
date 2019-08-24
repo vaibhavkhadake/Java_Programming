@@ -1,0 +1,25 @@
+package com.bridgelabzs.functional;
+import com.bridgelabzs.utility.Utility;
+
+public class Cubic_Running {
+
+	public static void main(String[] args)
+	{
+		int arr[], number;
+		
+		System.out.println("Enter number of elements ");
+		number=Utility.integerInput();
+		arr = new int[number];
+		
+		System.out.println("Enter elements in array ");
+		for(int i=0;i<number;i++)
+		{
+			arr[i]=Utility.integerInput();
+		}
+		
+		Utility.distinctTriplet(arr,number);
+	
+	}
+	
+	
+}

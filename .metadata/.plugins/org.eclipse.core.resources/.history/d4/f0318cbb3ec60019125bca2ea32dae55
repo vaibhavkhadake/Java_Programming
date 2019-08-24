@@ -1,0 +1,56 @@
+/******************************************************************************
+ *  
+ *  Purpose: BinarySearch method for Interger.
+ *  @author  Vaibhav P Khadake
+ *  @version 1.0
+ *  @since   24-08-2019
+ *
+ ******************************************************************************/
+package com.bridgelabzs.algorithm;
+
+import com.bridgelabzs.utility.Utility;
+
+public class BinarySearch_Integer {
+
+	public static void main(String[] args) 
+	{
+		System.out.println("enter how many elements");
+		int number=sc.nextInt();
+		int[] array= {1,2,3,4,5,6};
+		for(int i=0;i<array.length;i++)
+		{
+			array[i]=Utility.integerInput();		
+		}
+		for(int i=0;i<array.length;i++)
+		{
+			System.out.print(array[i]+" ");
+		}
+	
+	int high=array.length-1,low=0,mid=low+high/2;
+	System.out.println("Enter element you want to search");
+	int search=Utility.integerInput();
+	
+	while(low<high)
+	{
+		if(mid==search)
+		{
+			System.out.println("Element Found");
+			break;
+		}
+		else if(low<mid)
+		{
+			low=mid-1;
+		}
+		else if(high>mid)
+		{
+			high=mid+1;
+		}
+		mid = low+high/2;
+	}
+	if(low>high)
+	{
+		System.out.println("not found");
+	}
+	}
+
+}

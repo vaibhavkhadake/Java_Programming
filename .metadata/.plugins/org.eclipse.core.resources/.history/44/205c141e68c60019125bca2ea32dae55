@@ -1,0 +1,47 @@
+package com.bridgelabzs.functional;
+
+import com.bridgelabzs.utility.Utility;
+
+public class StopWatch 
+{
+
+	static long start = 0;
+	static long stop = 0;
+	static long elaps = 0;
+			
+	public void start()
+	{
+		start = System.currentTimeMillis();
+		System.out.println("Start Time "+start);
+	}
+	
+	public void stop()
+	{
+		stop = System.currentTimeMillis();
+		System.out.println("Stop Time  "+stop);
+	}
+	
+	public void elapse()
+	{
+	 elaps=stop-start;
+	 System.out.println(elaps);
+	}
+	
+	
+	public static void main(String[] args)
+	{
+				System.out.println("Press 1 to start time ");
+				Utility.integerInput();
+
+				System.out.println("Press 2 to stop time ");
+				Utility.integerInput();
+				
+				StopWatch sw=new StopWatch();
+				sw.start();
+				sw.stop();
+				sw.elapse();
+			//	Utility.elapse(start, stop, elaps);
+			
+			}
+
+}

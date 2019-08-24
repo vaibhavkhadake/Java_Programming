@@ -1,0 +1,15 @@
+package com.bridgelabzs.functional;
+
+import com.bridgelabzs.utility.Utility;
+
+public class FlipCoin {
+
+	public static void main(String[] args)
+	{
+		int coin;
+		System.out.println("Enter a number we want to Flip the coin");
+		coin=Utility.integerInput();
+		Utility.coin(coin);
+	}
+
+}

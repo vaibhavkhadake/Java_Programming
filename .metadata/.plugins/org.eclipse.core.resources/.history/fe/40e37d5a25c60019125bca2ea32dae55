@@ -1,0 +1,13 @@
+package com.bridgelabzs.functional;
+
+import com.bridgelabzs.utility.Utility;
+
+public class HarmonicNumber {
+
+	public static void main(String[] args)
+	{
+		int number=Integer.parseInt(args[0]);
+		Utility.harmonic(number);
+	}
+
+}
