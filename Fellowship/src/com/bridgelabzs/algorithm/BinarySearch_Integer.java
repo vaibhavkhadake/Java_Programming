@@ -27,11 +27,14 @@ public class BinarySearch_Integer {
 		{
 			System.out.print(array[i]+" ");
 		}
+		//Element arrange in sorted order.
+		System.out.println("\n Sorted elements are \n");
+		//method call from Utility class
+		Utility.bubbleInteger(array);
+		int high=array.length,low=0,mid=low+high/2;
 	
-	int high=array.length,low=0,mid=low+high/2;
-	
-	System.out.println("\nEnter element you want to search");
-	int search=Utility.integerInput();
+		System.out.println("\nEnter element you want to search");
+		int search=Utility.integerInput();
 
 		
 	while(low<=high)

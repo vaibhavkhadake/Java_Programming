@@ -267,8 +267,8 @@ public class Utility {
 	public static void anagram(String string1, String string2) 
 	{
 		// convert string to character
-		char[] ch1=string1.toCharArray(); 
-		char[] ch2=string2.toCharArray(); 
+		char[] ch1=string1.toLowerCase().toCharArray(); 
+		char[] ch2=string2.toLowerCase().toCharArray(); 
 		boolean anagram = true;  
 		//sort the elements 
 		Arrays.sort(ch1);
@@ -335,6 +335,247 @@ public class Utility {
 		}// i loop close
 		System.out.println(count);
 	}
+	/**
+	 * 
+	 * @param day
+	 * @param month
+	 * @param year
+	 */
+	public static void dayWeek(int day, int month, int year) 
+	{
+		int y = year - (14 - month) / 12;
+        int x = y + y/4 - y/100 + y/400;
+        int m = month + 12 * ((14 - month) / 12) - 2;
+        int date = (day + x + (31*m)/12) % 7;
+       if(date==0)
+       {
+    	   System.out.println("Day is Sunday");  
+       }
+       else if(date==1)
+       {
+    	   System.out.println("Day is Monday");   
+       }
+       else if(date==2)
+       {
+    	   System.out.println("Day is Tuesday");
+       }
+       else if(date==3)
+       {
+    	   System.out.println("Day is Wednesday");   
+       }
+       else if(date==4)
+       {
+    	   System.out.println("Day is Thirsday");   
+       }
+       else if(date==5)
+       {
+    	   System.out.println("Day is Friday"); 
+       }
+       else if(date==6)
+       {
+    	   System.out.println("Day is Saturday"); 
+       }      
+	}
+	/**
+	 * 
+	 * @param fahrenheit
+	 * @param celsius
+	 */
+	public static void temperature(double fahrenheit, double celsius)
+	{
+
+		//calculate Fahrenheit to Celsius
+		celsius = (fahrenheit- 32)*(5/9);
+		System.out.println("Celsius  "+celsius);
+		
+		//calculate  Celsius to Fahrenheit 
+		fahrenheit = (celsius*9/5)  + 32;
+		System.out.println("Fahrenheit "+fahrenheit);
+	}
+	/**
+	 * 
+	 * @param amount
+	 * @param rate_of_interest
+	 * @param period
+	 */
+	public static void compound_interest(double amount, double rate_of_interest, double period) {
+		
+
+		double total=amount*Math.pow((1+rate_of_interest/100),period);
+		System.out.println("total amount "+total);
+	}
+	/**
+	 * 
+	 * @param amount
+	 */
+	public static void calculation(int amount) 
+	{
+		int note1=0,note2=0,note5=0,note10=0,note50=0,note100=0,note500=0,note2000=0;
+		int result=0;
+		int count=0;
+		while(amount!=0)
+		{
+			if(amount>=2000)
+			{
+				note2000++;
+				count++;
+				amount=amount-2000;
+				result=result+2000;
+			}
+			else if(amount<2000&&amount>=500)	
+			{
+				note500++;
+				count++;
+				amount=amount-500;
+				result=result+500;
+			}
+			else if(amount<500&&amount>=100)	
+			{
+				note100++;
+				count++;
+				amount=amount-100;
+				result=result+100;
+			}
+			else if(amount<100&&amount>=50)	
+			{
+				note50++;
+				count++;
+				amount=amount-50;
+				result=result+50;
+			}
+			else if(amount<50&&amount>=10)	
+			{
+				note10++;
+				count++;
+				amount=amount-10;
+				result=result+10;
+			}else if(amount<10&&amount>=5)	
+			{
+				note5++;
+				count++;
+				amount=amount-5;
+				result=result+5;
+			}
+			else if(amount<5&&amount>=2)	
+			{
+				note2++;
+				count++;
+				amount=amount-2;
+				result=result+2;
+			}
+			else if(amount<2&&amount>=1)	
+			{
+				note1++;
+				count++;
+				amount=amount-1;
+				result=result+1;
+			}
+		}//while loop close
+		System.out.println("2000 note	"+note2000);
+		System.out.println("500 note	"+note500);
+		System.out.println("100 note	"+note100);
+		System.out.println("50 note		"+note50);
+		System.out.println("10 note		"+note10);
+		System.out.println("5 coin		"+note5);
+		System.out.println("2 coin		"+note2);
+		System.out.println("1 coin		"+note1);
+		System.out.println("Total number of notes "+count);
+		
+	}
+	/**
+	 * 
+	 * @param s
+	 */
+	public static void bubbleString(String[] s) 
+	{
+		String temp;
+		for(int i=0;i<s.length;i++)
+		{
+			for(int j=i+1;j<s.length;j++)
+			{
+				if(s[j].compareTo(s[i])<0)
+				{
+					temp=s[i];
+					s[i]=s[j];
+					s[j]=temp;
+				}
+			}
+			System.out.print(s[i]+" ");
+		}
+	}
+	/**
+	 * 
+	 * @param number
+	 */
+	public static void bubbleInteger(int[] number)
+	{
+		int temp=0;
+		for(int i=0;i<number.length;i++)
+		{
+			for(int j=1;j<(number.length-i);j++)
+			{
+				if(number[j-1]>number[j])
+				{
+					temp=number[j-1];
+					number[j-1]=number[j];
+					number[j]=temp;
+				}
+			}
+		}
+		//print the sorted elements.
+		for(int i=0;i<number.length;i++)
+		{
+		System.out.print(number[i]+" ");
+		}
+		
+	}
+	/**
+	 * 
+	 * @param number
+	 */
+	public static void insertionInteger(int[] number)
+	{
+		for (int j=1;j<number.length;j++)
+		{
+			int key=number[j];
+			int i=j-1;
+			while((i>=0)&&(number[i]>key))
+			{
+				number[i+1]=number[i];
+				i--;
+			}
+			number[i+1]=key;
+		}//for loop close
+		//sorted array
+			for(int i:number)
+			{
+				System.out.print(i+" ");
+			}
+		
+	}
+	/**
+	 * 
+	 * @param names
+	 */
+	public static void insetionString(String[] names)
+	{
+		for (int j=1;j<names.length;j++)
+		{
+			String key=names[j];
+			int i=j-1;
+			while(i>=0&&(names[i].compareTo(key))>0)
+			{
+				names[i+1]=names[i];
+				i--;
+			}
+			names[i+1]=key;
+		}//for loop close
+			//sorted array
+			for(String i:names)
+			{
+				System.out.print(i+" ");
+			}	
+	}
 	
-	
+		
 }
