@@ -1,5 +1,6 @@
 /******************************************************************************
  *  
+
  *  Purpose: BinarySearch method for String.
  *  @author  Vaibhav P Khadake
  *  @version 1.0
