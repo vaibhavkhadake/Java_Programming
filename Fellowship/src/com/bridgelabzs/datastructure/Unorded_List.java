@@ -1,90 +1,60 @@
 package com.bridgelabzs.datastructure;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 
-class Node
-{
-	public String data;
-	public Node next;
-	
-	Node(String d)
-	{
-		this.data=d;
-		this.next=null;
-	}
-}
+import com.bridgelabzs.utility.Utility;
 
-public class Unorded_List
+public class Unorded_List<E>
 {
-	public Node head;
-	public int size;
-	
-	public Unorded_List()
+	public static<E> void main(String[] args) throws IOException 
 	{
-		head=null;
-	}
-	
-	public void add(String data)
-	{
-		Node newItem=new Node(data);
-		newItem.next=head;
-		head=newItem;
-		size++;
-	}
-	
-	public String delete()
-	{
-		String temp=head.data;
-		head=head.next;
-		size--;
-		return temp;
+		Linked_List<String> ll=new Linked_List<String>();
+		File file=new File("/home/user/Desktop/Vaibhav_VK/sample");
+		System.out.println("Enter element to search");
+		String  search=Utility.stringInput();
+		BufferedReader br = new BufferedReader(new FileReader(file)); 
+		 String temp="";
+		 
+		  // Read lines from file.
+		  while (true) 
+		  {
+			  String line=br.readLine();
+			  if(line==null)
+			  {
+				  break;
+			  }
+			 // Split line.
+			  String[] words = line.split(" ");
+			 
+			 for(int i=0;i<words.length;i++)
+			 {
+				 temp=words[i];
+			 }
+		  }
+				  if(search.equals(temp))
+				  {
+					  System.out.println("Element found..........");
+					  ll.delete(); 
+				  }
+				  else  
+				  {
+					  System.out.println("Element not found..then element add in list");
+					  ll.add(search);
+			  
+					  FileWriter fw=new FileWriter(file,true);
+					  BufferedWriter bw= new BufferedWriter(fw);
+					  bw.write(search);
+			  
+					  bw.close();
+					  fw.close();
+				  }
+		 
+		  ll.display();
 		
-	}
-	
-	public void display()
-	{
-		Node n=head;
-		while(n!=null)
-		{
-			System.out.println(n.data);
-			n=n.next;
-		}
-	}
-	
-	public int search(String data)
-	{
-		Node search=head;
-		int count=1;
-		while(search!=null)
-		{
-			if(search.data==data)
-			{
-				return count;
-			}
-			else
-			{
-				search=search.next;
-				count++;
-			}
-		}
-		
-		return -1;
-		
-	}
-	
-	
-	
-	
-	public static void main(String[] args) 
-	{
-		
-		Unorded_List ul=new Unorded_List();
-		ul.add("Vaibhav");
-		ul.add("Amit");
-		ul.add("Suraj");
-		
-		ul.display();
-		ul.delete();
-		ul.search("aaa");
-		ul.display();
 	}
 
 }
