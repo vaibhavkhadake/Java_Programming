@@ -1,11 +1,20 @@
+/******************************************************************************
+ *  
+ *  Purpose: Linked List Logic.
+ *  @author  Vaibhav P Khadake
+ *  @version 1.0
+ *  @since   28-08-2019
+ *
+ ******************************************************************************/
 package com.bridgelabzs.datastructure;
 
 public class Linked_List<E>
 {
 	public Node<E> head;
 	public int size;
+	
 	/**
-	 * addAtBeginning
+	 * add At The End
 	 * @param string
 	 */
 	public void add(E data)
@@ -29,14 +38,7 @@ public class Linked_List<E>
 		}
 		
 	}
-	/*public  void add(Object string)
-	{
-		Node newItem=new Node(string);
-		newItem.next=head;
-		head=newItem;
-		size++;
-	}
-	*/
+
 	/**
 	 * addAtBeggining
 	 * @param string
@@ -72,21 +74,15 @@ public class Linked_List<E>
 			n=n.next;
 			
 		}
-		n.next=currentNode.next;
+		currentNode.next=n.next;
 		n.next=currentNode;
 		}
 	}
 	/**
 	 * delete
 	 */
-	public void delete()
-	{
-		E temp=head.data;
-		head=head.next;
-		size--;
-		System.out.println("Deleted "+temp+" Word from list");
-		
-	}
+	
+	
 	public void atDelete(int index)
 	{
 		if(index==0)
@@ -106,40 +102,58 @@ public class Linked_List<E>
 			n1=null;
 		}
 	}
-	/*public int search(E data,int length)
+	public boolean search(E data)
 	{
-		Node node=new Node();
-		node=head;
-		int position=1;
-		while(node.next!=null)
+		Node<E> current=head;
+		while(current!=null)
 		{
-			 if(search.equals(word))
-			  {
-				break; 
-			  }
-			 node=node.next;
-			 position++;
-		}
-		if(position>=length)
-		{
-			return -1;
-		}
-		else
-		{
-			return position;
+		if(current.data.equals(data))
+			{
+			return true;
+			}
+		current=current.next;
 		}
 		
+		return false;
+		
 	}
-	*/
+
 	public void display()
 	{
 		Node<E> n=head;
-		while(n!=null)
+		while(n.next!=null)
 		{
 			System.out.print(n.data+" ");
 			n=n.next;
 		}
+		System.out.print(n.data);
+	}
+
+	public void delete(String search) 
+	{
+		Node n = new Node();
+		n = head;
+		while(!search.equals(n.next.data))
+		{
+			n = n.next;
+		}
 		
+		Node n2 = new Node();
+		n2 = n.next;
+		System.out.println(n2.data);
+		if(n2.next==null)
+		{
+			System.out.println(n2.data);
+			n2 = null;
+			
+		}
+		else
+		{
+			n.next = n2.next;
+			System.out.println(n2.data);
+			n2 = null;
+		}
+			
 	}
 
 }

@@ -14,13 +14,12 @@ public class Unorded_List<E>
 	{
 		Linked_List<String> ll=new Linked_List<String>();
 		File file=new File("/home/user/Desktop/Vaibhav_VK/sample");
+		BufferedReader br = new BufferedReader(new FileReader(file)); 
 		System.out.println("Enter element to search");
 		String  search=Utility.stringInput();
-		BufferedReader br = new BufferedReader(new FileReader(file)); 
-		 String temp="";
-		 
-		  // Read lines from file.
-		  while (true) 
+		String temp="";
+		
+		while (true) 
 		  {
 			  String line=br.readLine();
 			  if(line==null)
@@ -29,32 +28,35 @@ public class Unorded_List<E>
 			  }
 			 // Split line.
 			  String[] words = line.split(" ");
-			 
+			
 			 for(int i=0;i<words.length;i++)
 			 {
 				 temp=words[i];
+				 ll.add(temp);
 			 }
-		  }
-				  if(search.equals(temp))
-				  {
-					  System.out.println("Element found..........");
-					  ll.delete(); 
-				  }
-				  else  
-				  {
-					  System.out.println("Element not found..then element add in list");
-					  ll.add(search);
-			  
-					  FileWriter fw=new FileWriter(file,true);
-					  BufferedWriter bw= new BufferedWriter(fw);
-					  bw.write(search);
-			  
-					  bw.close();
-					  fw.close();
-				  }
-		 
+			 if(ll.search(search))
+			 {
+				 ll.display();
+				System.out.println("\nElement found"); 
+				ll.delete(search);
+				break;
+			 }
+			 else
+			 {
+				 
+				 System.out.println("Element not found ");
+				 ll.add(search);
+				 System.out.println("New element added ");
+				  FileWriter fw=new FileWriter(file,true);
+				  BufferedWriter bw= new BufferedWriter(fw);
+				  bw.write(search);
+				 
+				 break;
+				 
+			 }
+		  }	 
+	
 		  ll.display();
-		
 	}
 
 }
