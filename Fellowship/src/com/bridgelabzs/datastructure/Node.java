@@ -12,12 +12,13 @@ public class Node<E>
 {
 
 	public E data;
-	Node next;
+	public Node next;
 	
 	Node()
 	{
-		//next=null;
 		//data=0;
+		//next=null;
+		
 		
 	}
 	Node(E d)

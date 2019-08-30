@@ -3,7 +3,6 @@
     <fullyQualifiedTypeName name="java.lang.Void"/>
     <fullyQualifiedTypeName name="Sample2"/>
     <fullyQualifiedTypeName name="com.bridgelabzs.functional.MergeSort"/>
-    <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="java.lang.Exception"/>
     <fullyQualifiedTypeName name="com.bridgelabzs.functional.StopWatch"/>
     <fullyQualifiedTypeName name="com.bridgelabzs.algorithm.Vending_Machine"/>
@@ -12,14 +11,19 @@
     <fullyQualifiedTypeName name="com.bridgelabzs.algorithm.MergeSort"/>
     <fullyQualifiedTypeName name="com.bridgelabzs.datastructure.Unorded_List.Node"/>
     <fullyQualifiedTypeName name="com.bridgelabzs.datastructure.Unorded_List"/>
-    <fullyQualifiedTypeName name="java.io.File"/>
     <fullyQualifiedTypeName name="javax.naming.directory.SearchControls"/>
     <fullyQualifiedTypeName name="java.lang.String"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
-    <fullyQualifiedTypeName name="com.bridgelabzs.utility.Utility"/>
     <fullyQualifiedTypeName name="java.io.FileWriter"/>
     <fullyQualifiedTypeName name="java.io.BufferedWriter"/>
     <fullyQualifiedTypeName name="com.bridgelabzs.datastructure.Node"/>
     <fullyQualifiedTypeName name="com.bridgelabzs.datastructure.Linked_List"/>
+    <fullyQualifiedTypeName name="com.bridgelabzs.datastructure.QueueLogic"/>
+    <fullyQualifiedTypeName name="java.io.File"/>
+    <fullyQualifiedTypeName name="java.io.BufferedReader"/>
+    <fullyQualifiedTypeName name="java.io.FileReader"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="com.bridgelabzs.datastructure.Deque"/>
+    <fullyQualifiedTypeName name="com.bridgelabzs.utility.Utility"/>
 </qualifiedTypeNameHistroy>

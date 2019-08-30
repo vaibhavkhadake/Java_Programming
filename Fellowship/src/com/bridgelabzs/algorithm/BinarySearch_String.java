@@ -23,6 +23,7 @@ public class BinarySearch_String {
 		while(low<high)
 		{
 		mid=low+high/2;
+		//System.out.println("\nEnter element ");
 			if(name[mid].compareTo(search)==0)
 			{
 				System.out.println("Name Found");

@@ -1,14 +1,6 @@
-/******************************************************************************
- *  
- *  Purpose: Linked List Logic.
- *  @author  Vaibhav P Khadake
- *  @version 1.0
- *  @since   28-08-2019
- *
- ******************************************************************************/
 package com.bridgelabzs.datastructure;
 
-public class Linked_List<E>
+public class Deque<E>
 {
 	public Node<E> head;
 	public int size;
@@ -57,26 +49,7 @@ public class Linked_List<E>
 	 * @param index
 	 * @param string
 	 */
-	public void addAnyPosition(int index,E string)
-	{
-		Node<E> currentNode=new Node<E>();
-		currentNode.data=string;
-		currentNode.next=null;
-		if(index==0)
-		{
-			addAtBeggining(string);
-		}
-		else
-		{
-		Node<E> n=head;
-		for(int i=0;i<index-1;i++)
-		{
-			n=n.next;
-		}
-		currentNode.next=n.next;
-		n.next=currentNode;
-		}
-	}
+	
 	/**
 	 * delete
 	 */
@@ -101,21 +74,7 @@ public class Linked_List<E>
 			n1=null;
 		}
 	}
-	public boolean search(E data)
-	{
-		Node<E> current=head;
-		while(current!=null)
-		{
-		if(current.data.equals(data))
-			{
-			return true;
-			}
-		current=current.next;
-		}
-		
-		return false;
-		
-	}
+	
 
 	public void display()
 	{
@@ -152,38 +111,29 @@ public class Linked_List<E>
 			n2 = null;
 		}		
 	}
-	public void sort()
+	public void delete() 
 	{
-		Node current=head;
-		Node index=null;
-		int temp;
-		
-		if(head==null)
+		Node n = new Node();
+		n = head;
+		head=head.next;
+		E str=(E) n.data;
+		n=null;
+		System.out.println(str);
+	}
+	public void deleteAtEnd()
+	{
+		Node n=new Node();
+		n=head;
+		while(n.next.next!=null)
 		{
-			return ;
+			n=n.next;
 		}
-		else
-		{
-		 //Node index will point to node next to current  
-		while(current!=null)
-		{
-			index=current.next;
-			
-			while(index!=null)
-			{
-				//Use bubble sort 
-			    if((int)current.data > (int)index.data)
-			    {  
-			    	   temp = (int) current.data;  
-                       current.data = index.data;  
-                       index.data = temp;  
-				}
-			    index=index.next;
-			}
-			current=current.next;
-		}
-		}
+		Node n2=n.next;
+		n.next=null;
+		System.out.println(n2.data);
+		n2=null;
 		
 		
 	}
+
 }
