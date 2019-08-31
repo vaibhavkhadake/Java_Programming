@@ -13,6 +13,7 @@ public class Node<E>
 
 	public E data;
 	public Node next;
+	public Node prev;
 	
 	Node()
 	{
@@ -25,6 +26,8 @@ public class Node<E>
 	{
 		data =  d;
 		next = null;
+		prev=null;
+		
 	}
 	
 }

@@ -17,7 +17,7 @@ public class Linked_List<E>
 	 * add At The End
 	 * @param string
 	 */
-	public void add(String search)
+	public void add(Object search)
 	{
 		Node<E> node = new Node<E>();
 		node.data = (E) search;
@@ -34,7 +34,9 @@ public class Linked_List<E>
 			{
 				n = n.next;
 			}
-			n.next =  node;
+			n.next =  node.next;
+			node.next=n;
+
 		}
 		
 	}
@@ -119,7 +121,7 @@ public class Linked_List<E>
 
 	public void display()
 	{
-		Node<E> n=head;
+				Node<E> n=head;
 		while(n.next!=null)
 		{
 			System.out.print(n.data+" ");
@@ -130,27 +132,37 @@ public class Linked_List<E>
 
 	public void delete(E search) 
 	{
-		Node n = new Node();
-		n = head;
-		while(!search.equals(n.next.data))
-		{
-			n = n.next;
+		Node n = head,temp=null;
+		if(n!=null && n.data==search) {
+			head = n.next;
+			return;
 		}
-		
-		Node n2 = new Node();
-		n2 = n.next;
-		if(n2.next==null)
-		{
-			//System.out.println(n2.data);
-			n2 = null;
-			
+		while(n!=null && n.data!=search) {
+			temp =n;
+		 n =n.next;
 		}
-		else
-		{
-			n.next = n2.next;
-			System.out.println(n2.data);
-			n2 = null;
-		}		
+		temp.next=n.next;
+		System.out.println("Deleted Successfully");
+		display();
+//		while(!search.equals(n.next.data))
+//		{
+//			n = n.next;
+//		}
+//		
+//		Node n2 = new Node();
+//		n2 = n.next;
+//		if(n2.next==null)
+//		{
+//			//System.out.println(n2.data);
+//			n2 = null;
+//			
+//		}
+//		else
+//		{
+//			n.next = n2.next;
+//			System.out.println(n2.data);
+//			n2 = null;
+//		}		
 	}
 	public void sort()
 	{

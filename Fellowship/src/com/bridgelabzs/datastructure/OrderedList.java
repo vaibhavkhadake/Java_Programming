@@ -44,7 +44,6 @@ public class OrderedList {
 			 if(temp.equals(search))
 				{
 				 System.out.println("Element Found");
-				
 				 flag=true;
 				 break;
 				}
@@ -55,15 +54,13 @@ public class OrderedList {
 		{
 			ll.add(search);
 		}
+
 		 }
-		for(int i=0;i<words.length;i++)	
-		{
-			
-		}
+
 	
 		
-//		ll.sort();
-//		ll.display();
+		ll.sort();
+		ll.display();
 //		
 //		ll.addAnyPosition(3, 30);
 //		ll.display();

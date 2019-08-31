@@ -2,27 +2,39 @@ package com.bridgelabzs.datastructure;
 
 import com.bridgelabzs.utility.Utility;
 
-public class PalindromQueue {
+public class PalindromQueue 
+{
 
 	public static void main(String[] args)
-	{
-		Deque<String> d=new Deque<String>();
-//		System.out.println("Enter element in queue");
-//		String element=Utility.stringInput();
-		d.add("Abhi");
-		d.add("Mark");
-		d.add("Suraj");
-		d.add("Ganesh");
-		d.add("Sachin");
-		d.addAtBeggining("Vaibhav");
-		d.display();
-		d.delete();
-		d.display();
-		d.delete();
+	{	
 		
-		d.atDelete(2);
-		d.display();
-		d.deleteAtEnd();
+		Deque<Character> deque=new Deque<Character>();
+		System.out.println("Enter element in queue");
+		String element=Utility.stringInput();
+		int flag=0;
+
+		for(int i=0;i<element.length();i++)
+		{
+			char ch=element.charAt(i);
+			deque.addAtEnd(ch);
+		}
+		deque.display();
+		while(deque.size>1)
+		{
+			char char1=deque.dLeftdelete();
+			char char2=deque.dRightdelete();
+			
+			if(char1!=char2)
+			{
+				flag=1;
+				break;
+			}
+		}
+		if(flag==0)
+			System.out.println("String is palindrome");
+		else
+			System.out.println("String is not palindrome");
 	}
+	
 
 }
