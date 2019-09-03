@@ -14,7 +14,7 @@ public class Linked_List<E>
 	public int size;
 	
 	/**
-	 * add At The End
+	 * add  Element at The End in linked list.
 	 * @param string
 	 */
 	public void add(Object search)
@@ -34,15 +34,14 @@ public class Linked_List<E>
 			{
 				n = n.next;
 			}
-			n.next =  node.next;
-			node.next=n;
+			n.next =  node;
 
 		}
 		
 	}
 
 	/**
-	 * addAtBeggining
+	 * add  Element at The Beggining in linked list.
 	 * @param string
 	 */
 	public void addAtBeggining(E string)
@@ -55,7 +54,7 @@ public class Linked_List<E>
 		
 	}
 	/**
-	 * 
+	 * add  Element at any position in linked list.
 	 * @param index
 	 * @param string
 	 */
@@ -79,11 +78,11 @@ public class Linked_List<E>
 		n.next=currentNode;
 		}
 	}
+	
 	/**
-	 * delete
+	 * Delete  Element at any position in linked list.
+	 * @param index
 	 */
-	
-	
 	public void atDelete(int index)
 	{
 		if(index==0)
@@ -103,12 +102,18 @@ public class Linked_List<E>
 			n1=null;
 		}
 	}
-	public boolean search(E data)
+	/**
+	 * Search  Element in linked list.
+	 * @param search
+	 * @return
+	 */
+	public boolean search(E search)
 	{
 		Node<E> current=head;
 		while(current!=null)
 		{
-		if(current.data.equals(data))
+		if(current.data.equals(search))
+		//	if(current.data==search)
 			{
 			return true;
 			}
@@ -118,10 +123,12 @@ public class Linked_List<E>
 		return false;
 		
 	}
-
+/**
+ * Display all the elelments in linked list.
+ */
 	public void display()
 	{
-				Node<E> n=head;
+		Node<E> n=head;
 		while(n.next!=null)
 		{
 			System.out.print(n.data+" ");
@@ -129,41 +136,39 @@ public class Linked_List<E>
 		}
 		System.out.print(n.data+"\n");
 	}
-
-	public void delete(E search) 
+	/**
+	 * 
+	 * @param search
+	 */
+	public void delete(Object search)
 	{
-		Node n = head,temp=null;
-		if(n!=null && n.data==search) {
-			head = n.next;
-			return;
+		Node n=head;
+		if(n.data==search)
+		{
+			head=n.next;
+			//n=null;
 		}
-		while(n!=null && n.data!=search) {
-			temp =n;
-		 n =n.next;
+		else if(n.next.next==null)
+		{
+			Node temp=n.next;
+			n.next=null;
+			//temp=null;
 		}
-		temp.next=n.next;
-		System.out.println("Deleted Successfully");
-		display();
-//		while(!search.equals(n.next.data))
-//		{
-//			n = n.next;
-//		}
-//		
-//		Node n2 = new Node();
-//		n2 = n.next;
-//		if(n2.next==null)
-//		{
-//			//System.out.println(n2.data);
-//			n2 = null;
-//			
-//		}
-//		else
-//		{
-//			n.next = n2.next;
-//			System.out.println(n2.data);
-//			n2 = null;
-//		}		
+		else
+		{	
+			while(!search.equals(n.next.data))
+			{
+				n = n.next;		
+			}
+			Node temp=n.next;
+			n.next=temp.next;
+			temp=null;
+		}
 	}
+	
+	/**
+	 * Sort the elements in asending order
+	 */
 	public void sort()
 	{
 		Node current=head;
@@ -194,8 +199,20 @@ public class Linked_List<E>
 			}
 			current=current.next;
 		}
+		}	
+		
+	}
+
+	public String addToFile() 
+	{
+		String temp="";
+		Node n=head;
+		while(n!=null)
+		{
+			temp=temp+n.data+" ";
+			n=n.next;
 		}
-		
-		
+		//System.out.println(temp);
+		return temp;
 	}
 }

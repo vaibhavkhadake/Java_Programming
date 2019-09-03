@@ -16,12 +16,14 @@ public class Unorded_List<E>
 		Linked_List<String> ll=new Linked_List<String>();
 		File file=new File("/home/user/Desktop/Vaibhav_VK/sample");
 		BufferedReader br = new BufferedReader(new FileReader(file)); 
+		
 		System.out.println("Enter element to search");
 		String  search=Utility.stringInput();
 		String temp="";
 		
 		while (true) 
 		  {
+			
 			  String line=br.readLine();
 			  if(line==null)
 			  {
@@ -33,7 +35,7 @@ public class Unorded_List<E>
 			 for(int i=0;i<words.length;i++)
 			 {
 				 temp=words[i];
-				 ll.addAtBeggining(temp);
+				 ll.add(temp);
 			 }
 			 if(ll.search(search))
 			 {
@@ -47,44 +49,18 @@ public class Unorded_List<E>
 			 {
 				 
 				 System.out.println("Element not found ");
-				 ll.addAtBeggining(search);
-				 System.out.println("New element added ");
-				  FileWriter fw=new FileWriter(file,true);
-				  BufferedWriter bw= new BufferedWriter(fw);
-				  bw.write(search);
-				 
+				 	ll.add(search);
+				 	System.out.println("New element added ");
+				 	ll.display();
+				 	
 				 break;
-				 
-			 }
+			 } 
 		  }	 
-
-		  ll.display();
-//		  File file = new File("/home/user/Desktop/Vaibhav_VK/sample");
-//			Scanner scan = new Scanner(System.in);
-//			scan = new Scanner(file);
-//			String string;
-//			int length = (int) file.length();
-//			while(scan.hasNext()) 
-//			{
-//				String s = scan.next();
-//				ll.add(s);
-//			}
-//			System.out.println("Words seperated from text file:\n");
-//			ll.display();
-//			System.out.println("\nEnter the key u want to search");
-//			Scanner scanner = new Scanner(System.in);
-//			string=scanner.next();
-//			if(ll.search(string))
-//			{
-//				System.out.println("\nElement Found and deleting element....\n");
-//				ll.delete(string);
-//			}
-//			else {
-//				System.out.println("\nElement Not Found, Adding into the list\n");
-//				ll.add(string);
-//				System.out.println("Added Successfully");
-//				ll.display();
-//			}
+		String s=ll.addToFile();
+		 FileWriter fw=new FileWriter(file);
+		 BufferedWriter bw= new BufferedWriter(fw);
+		 fw.write(s);
+		 bw.flush();
 	}
 
 }

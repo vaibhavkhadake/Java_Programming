@@ -6,15 +6,7 @@ public class PrimeNumber2D
 	
 	public static void main (String [] args)
 	{
-		if(Prime.prime(1000))
-		{
-			
-		}
-
-		int[][] range =new int[10][30];
-		
-
-	int array[]=new int[168];
+		int array[]=new int[168];
 		int k=1;
 		int i=0;
 		int n=1;
@@ -27,8 +19,6 @@ public class PrimeNumber2D
 				n++;
 			}
 			k++;
-		
-			
 		}
 		int m=0;
 		int array1[][]=new int[10][25];
@@ -43,7 +33,7 @@ public class PrimeNumber2D
 				}
 			}
 		}
-		for(int j=0;j<10;j++)
+		for(int j=0;j<7;j++)
 		{
 			for(int l=0;l<20;l++)
 			{
@@ -51,6 +41,7 @@ public class PrimeNumber2D
 			}
 			System.out.println("\n");
 		}
-	}
+
 		
+	}		
 }

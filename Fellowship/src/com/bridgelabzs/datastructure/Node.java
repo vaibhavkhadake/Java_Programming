@@ -31,36 +31,3 @@ public class Node<E>
 	}
 	
 }
-/**
- *  // Read lines from file.
-		  
-			 for(int i=0;i<words.length;i++)
-			 {
-			 if(search.equals(words[i]))
-			  {
-				  System.out.println("Element found..........");
-				  ll.delete(); 
-			  }
-			 else
-			  {
-				  System.out.println("Element not found..then element add in list");
-				  ll.add(search);
-		  
-				  FileWriter fw=new FileWriter(file,true);
-				  BufferedWriter bw= new BufferedWriter(fw);
-				  bw.write(search);
-		  
-				  bw.close();
-				  fw.close();
-			  }
-			 }
-			 
-		  }
-		  
-		  
-		  
-		  
- * 
- * 
- * 
- */

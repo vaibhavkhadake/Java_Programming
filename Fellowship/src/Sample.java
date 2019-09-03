@@ -1,193 +1,55 @@
-
-import java.util.Random;
 import java.util.Scanner;
 
-public class Sample {
-	public static void main(String[] args) {
-		Scanner lalit= new Scanner(System.in);
-		
-		System.out.println("here is the Tic Tac Toe box number");
-		System.out.println(" ");
-		
-		int[][] box = new int[3][3];
-		
-		int list[] = new int[9];
-		int c=1;
-		
-		for(int i=0;i<3;i++)
-		{
-			for(int j=0;j<3;j++)
-			{
-				System.out.print(" "+c+ "  ");
-				box[i][j] = c;
-				c++;
-			}
-			System.out.println(" ");
-			System.out.println(" ");
-		
-		}
-		
-		
-		System.out.println("");
-		for(int k=0;k<c-1;k++)
-		{	
-			
-			for(int i=0;i<3;i++)
-			{
-				for(int j=0;j<3;j++)
-				{
-					// for user
-					
-					for(int x=0;x<list.length;x++)
-						if(list[x] ==  box[i][j])
-							box[i][j] = 22;
-					
-				}
-				System.out.println(" ");
-				System.out.println(" ");
-			
-			}
-			int cmp = computer(9);
-			System.out.print("Computer Enter number "+cmp);
-			list[k] = +cmp;
-			k++;
-			
-			for(int i=0;i<3;i++)
-			{
-				for(int j=0;j<3;j++)
-				{
-					// for user
-					
-					for(int x=0;x<list.length;x++)
-						if(list[x] ==  box[i][j])
-							box[i][j] = 11;
-					
-				}
-				System.out.println(" ");
-				System.out.println(" ");
-			
-			}
-			
-			for(int i=0;i<3;i++)
-			{
-				for(int j=0;j<3;j++)
-				{
-					if(box[i][j] == 11)
-						System.out.print(" C  ");
-					else if(box[i][j] == 22)
-						System.out.print(" X  ");
-					else
-						System.out.print(" "+box[i][j]+ "  ");
-				}
-				System.out.println(" ");
-				System.out.println(" ");
-			
-			}
-			
-			if(box[0][0] + box[0][1] + box[0][2] == 66)
-			{
-				// for checking 1-2-3
-				if(box[0][0] + box[0][1] + box[0][2] == 66)
-					System.out.println("You are win...");
-				else if(box[0][0] + box[0][1] + box[0][2] == 33)
-					System.out.println("Computer Has won...");
-			}else if(box[1][0] + box[1][1] + box[1][2] == 66)
-			{
-				//for checking 4-5-6
-				if(box[1][0] + box[1][1] + box[1][2] == 66)
-					System.out.println("You are win...");
-				else if(box[1][0] + box[1][1] + box[1][2] == 33)
-					System.out.println("Computer Has won...");
-			}else  if(box[2][0] + box[2][1] + box[2][2] == 66)
-			{
-				//for checking 7-8-9
-				if(box[2][0] + box[2][1] + box[2][2] == 66)
-					System.out.println("You are win...");
-				else if(box[2][0] + box[2][1] + box[2][2] == 33)
-					System.out.println("Computer Has won...");
- 				
-			}else if(box[0][0] + box[1][0] + box[2][0] == 66)
-			{
-				//for checking 1-4-7
-				if(box[0][1] + box[1][0] + box[2][0] == 66)
-					System.out.println("You are win...");
-				else if(box[0][1] + box[1][0] + box[2][0] == 33)
-					System.out.println("Computer Has won...");
-			}else if(box[0][1] + box[1][1] + box[2][1] == 66)
-			{
-				//for checking 2-5-8
-				if(box[0][1] + box[1][1] + box[2][1] == 66)
-					System.out.print("You are win...");
-				else if(box[0][1] + box[1][1] + box[2][1] == 33)
-					System.out.println("Computer Has won...");
-			}else  if(box[0][2] + box[1][2] + box[2][2] == 66)
-			{
-				//for checking 3-6-9
-				if(box[0][2] + box[1][2] + box[2][2] == 66)
-					System.out.println("You are win...");
-				else if(box[0][2] + box[1][2] + box[2][2] == 33)
-					System.out.println("Computer Has won...");
-			}else if(box[0][0] + box[1][1] + box[2][2] == 66)
-			{
-				//for checking 1-5-9
-				if(box[0][0] + box[1][1] + box[2][2] == 66)
-					System.out.println("You are win...");
-				else if(box[0][0] + box[1][1] + box[2][2] == 33)
-					System.out.println("Computer Has won...");
-			}else if(box[0][2] + box[1][1] + box[2][0] == 66)
-			{
-				//for checking 3-5-7
-				if(box[0][2] + box[1][1] + box[2][0] == 66)
-					System.out.println("You are win...");
-				else if(box[0][2] + box[1][1] + box[2][0] == 33)
-					System.out.println("Computer Has won...");
-			} 
-			/*
-			 {
-				System.out.println(" Match is draw..");
-			}
-			else if(box[0][0] == box[2][1])
-			{
-				if(box[0][0] == box[2][2])
-					if(box[0][0] == 22)
-						System.out.println("You are win...");
-					else if(box[0][0] == 11)
-						System.out.println("Computer Has won...");
-			}else if(box[0][2] == box[2][1])
-			{
-				if(box[0][2] == box[2][0])
-					if(box[0][2] == 22)
-						System.out.println("You are win...");
-					else if(box[0][2] == 11)
-						System.out.println("Computer Has won...");
-			} */
-			
-			
-			for(int x=0;x<list.length;x++)
-				System.out.print(list[x]+" ");
-			
-			System.out.println(" ");
-			
-			System.out.print("Enter the box number ");
-			list[k] = lalit.nextInt();
-			
-			System.out.println(" ");
-			
-			lalit.close();
-		
-		}		
-		
-	}
-	static int computer(int N)
-	{
-		Random rand = new Random();
-		
-		int ramdom_number = rand.nextInt(9);
-		
-		return ramdom_number;
-		
-	}    
-	
-	
+public class Sample 
+{
+    static	Scanner scan=new Scanner(System.in);
+	static long fact1 = 1;
+	static long fact2 = 1;
+	static long fact3 = 1;
 
-}
+	public static long factorial(long n) {
+
+		for (int i = 1; i <= n; i++) {
+			fact1 = i * fact1;
+		}
+		// System.out.println(fact1);
+		return fact1;
+	}
+
+	public static long factorial1(long n) {
+		long n2 = 2 * n;
+		for (int i = 1; i <= n2; i++) {
+			fact2 = i * fact2;
+		}
+		return fact2;
+	}
+	
+	public static long factoria12(long n) {
+		long n1 = n + 1;
+		for (int i = 1; i <= n1; i++) {
+			fact3 = i * fact3;
+		}
+		return fact3;
+	}
+
+	public static void main(String[] args) {
+		boolean isnumber;
+		int n=0;
+		System.out.println("Enter a number");
+		do {
+			if(scan.hasNextInt())
+			{
+			 n =scan.nextInt();
+			isnumber=true;
+			}else
+			{
+				System.out.println("invalid input try again");
+				isnumber=false;
+				scan.next();
+			}
+		}while(!(isnumber));
+		
+		long tree = ((factorial1(n)) / (factoria12(n) * factorial(n)));
+		System.out.println(tree + ":number of nodes in tree for =>" + n);
+	}
+	}

@@ -17,50 +17,58 @@ import java.io.IOException;
 
 import com.bridgelabzs.utility.Utility;
 
-public class OrderedList {
+public class OrderedList <E>{
 
-	public static void main(String[] args) throws IOException
+	public static <E> void main(String[] args) throws IOException
 	{
 		Linked_List<Integer> ll=new Linked_List<Integer>();
 		File file=new File("/home/user/Desktop/Vaibhav_VK/Fellowship/IntegerValues");
 		BufferedReader br=new BufferedReader(new FileReader(file));
-		String st=br.readLine();
-		System.out.println(st);
-		String[] words = st.split(" ");
-		
+		int number;
 		System.out.println("Enter number to search");
-		String search=Utility.stringInput();
-		
-		FileWriter fw=new FileWriter(file,true);
-		BufferedWriter bw= new BufferedWriter(fw);
-		bw.write(search);
-		
-		String temp="";
-		boolean flag=false;
-		
-		for(int i=0;i<words.length;i++)
-		 {
-			temp=words[i];
-			 if(temp.equals(search))
-				{
-				 System.out.println("Element Found");
-				 flag=true;
-				 break;
-				}
-		 }
-		for(int i=0;i<words.length;i++)
-		 {
-		if(flag==false)
-		{
-			ll.add(search);
-		}
+		int search=  Utility.integerInput();
+		while (true) 
+		  {
+			  String line=br.readLine();
+			  if(line==null)
+			  {
+				  break;
+			  }
+			 // Split line.
+			  String[] words = line.split(" ");
+			  for(int i=0;i<words.length;i++)
+				 {
+					number=Integer.parseInt(words[i]); 
+					 ll.add(number);
+				 }
+			// ll.display();
+			// ll.sort();
+			 if(ll.search(search))
+			 {
+				System.out.println("\nElement found"); 
+				ll.delete(search);
+				ll.display();
+				break;
+			 }
+			 else
+			 {
+				 System.out.println("Element not found ");
+				 	ll.add(search);
+				 	System.out.println("New element added ");
+				 	ll.display();	
+				 	break;
+			 } 
+		  }	 
+		 String s=ll.addToFile();
+		 FileWriter fw=new FileWriter(file);
+		 BufferedWriter bw= new BufferedWriter(fw);
+		 fw.write(s);
+		 bw.flush();
+	}
 
-		 }
 
 	
 		
-		ll.sort();
-		ll.display();
 //		
 //		ll.addAnyPosition(3, 30);
 //		ll.display();
@@ -71,11 +79,9 @@ public class OrderedList {
 //		ll.atDelete(2);
 //		ll.display();
 //	
-//		System.out.println("Enter Number to search");
-//		int number=Utility.integerInput();
 		
 		
 
-	}
+
 
 }
