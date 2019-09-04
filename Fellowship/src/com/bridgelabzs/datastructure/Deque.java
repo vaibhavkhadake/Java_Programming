@@ -1,3 +1,11 @@
+/******************************************************************************
+ *  
+ *  Purpose: Write a program in double ended Queue.
+ *  @author  Vaibhav P Khadake
+ *  @version 1.0
+ *  @since   1-09-2019
+ *
+ ******************************************************************************/
 package com.bridgelabzs.datastructure;
 
 public class Deque<E>
@@ -48,14 +56,9 @@ public class Deque<E>
 		head=currentNode;
 		size++;
 	}
-	/**
-	 * 
-	 * @param index
-	 * @param string
-	 */
 	
 	/**
-	 * delete
+	 * delete the element through index position.
 	 */
 	
 	
@@ -91,7 +94,10 @@ public class Deque<E>
 		}
 		System.out.print(n.data+"\n");
 	}
-
+/**
+ * delete the element through element.
+ * @param search
+ */
 	public void delete(E search) 
 	{
 		Node n = new Node();
@@ -117,6 +123,10 @@ public class Deque<E>
 		}
 		size--;
 	}
+	/**
+	 *add element at the end.
+	 * @param element
+	 */
 	public void addAtEnd(E element)
 	{
 		Node n = new Node();
@@ -140,6 +150,10 @@ public class Deque<E>
 		
 		size++;	
 	}
+	/**
+	 * Delete element left to right.
+	 * @return
+	 */
 	public E deleteAtLeftEnd() 
 	{
 		Node n = new Node();
@@ -153,6 +167,10 @@ public class Deque<E>
 		
 		return str;
 	}
+	/**
+	 * Delete element right.to left
+	 * @return
+	 */
 	public E deleteAtRightEnd()
 	{
 		Node n=new Node();
@@ -172,6 +190,10 @@ public class Deque<E>
 		System.out.println("Right"+size);
 		return str;
 	}
+	/**
+	 * Double ended for delete the element at the left side.
+	 * @return
+	 */
 	public E dLeftdelete() {
 		Node n= new Node();
 		n=head;
@@ -182,6 +204,10 @@ public class Deque<E>
 		return str;
 		
 	}
+	/**
+	 * Double ended for delete the element at the Right side.
+	 * @return
+	 */
 	public E dRightdelete() {
 		Node n= new Node();
 		n=head;

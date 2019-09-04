@@ -59,15 +59,15 @@ public class OrderedList <E>{
 				 	break;
 			 } 
 		  }	 
+		/**
+		 * Write a file elements.
+		 */
 		 String s=ll.addToFile();
 		 FileWriter fw=new FileWriter(file);
 		 BufferedWriter bw= new BufferedWriter(fw);
 		 fw.write(s);
 		 bw.flush();
-	}
-
-
-	
+	}	
 		
 //		
 //		ll.addAnyPosition(3, 30);
@@ -79,9 +79,5 @@ public class OrderedList <E>{
 //		ll.atDelete(2);
 //		ll.display();
 //	
-		
-		
-
-
 
 }

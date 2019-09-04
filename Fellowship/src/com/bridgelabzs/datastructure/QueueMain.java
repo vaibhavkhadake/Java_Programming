@@ -1,3 +1,11 @@
+/******************************************************************************
+ *  
+ *  Purpose: Simulate Banking Cash Counter.
+ *  @author  Vaibhav P Khadake
+ *  @version 1.0
+ *  @since   29-08-2019
+ *
+ ******************************************************************************/
 package com.bridgelabzs.datastructure;
 
 import com.bridgelabzs.utility.Utility;

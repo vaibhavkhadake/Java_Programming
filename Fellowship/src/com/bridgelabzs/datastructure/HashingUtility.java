@@ -1,10 +1,22 @@
+/******************************************************************************
+ *  
+ *  Purpose: Write Hashing program logic.
+ *  @author  Vaibhav P Khadake
+ *  @version 1.0
+ *  @since   3-09-2019
+ *
+ ******************************************************************************/
 package com.bridgelabzs.datastructure;
 
 public class HashingUtility <E>
 {
 	public Node<E> head;
 	public int size;
-
+/**
+ * Add the element in hash table
+ * @param search
+ * @return
+ */
 	public E add(Object search)
 	{
 		Node<E> node = new Node<E>();

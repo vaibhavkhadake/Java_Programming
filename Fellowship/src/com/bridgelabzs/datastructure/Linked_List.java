@@ -202,7 +202,10 @@ public class Linked_List<E>
 		}	
 		
 	}
-
+/**
+ * Add elemnt in file.
+ * @return
+ */
 	public String addToFile() 
 	{
 		String temp="";

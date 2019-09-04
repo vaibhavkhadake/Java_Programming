@@ -12,6 +12,7 @@ import com.bridgelabzs.utility.Utility;
 
 public class Calender
 {
+	static int[] demo=new int[10];
 
 	static int[][] calender=new int[5][7];
 	static int[] month= { 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
@@ -29,7 +30,7 @@ public class Calender
 	 
 	 public static void display(int m)
 	 {
-		 System.out.println("\n \tSun 	Mon 	Tus 	Wed 	Thir 	Fri 	Sat ");
+		 System.out.println("\nSun 	Mon 	Tus 	Wed 	Thir 	Fri 	Sat ");
 		 for(int i=0;i<calender.length;i++)
 		 {
 			 for(int j=0;j<calender[i].length;j++)
@@ -40,7 +41,7 @@ public class Calender
 				 }
 				 else if(calender[i][j]>0)
 				 {
-					 System.out.print("\t" + calender[i][j]);
+					 System.out.print(calender[i][j]+"\t" );
 				 }
 			 }
 			 System.out.println();

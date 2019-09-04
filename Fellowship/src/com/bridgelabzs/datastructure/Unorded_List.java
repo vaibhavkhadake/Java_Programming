@@ -1,3 +1,11 @@
+/******************************************************************************
+ *  
+ *  Purpose: UnOrdered List using generics.
+ *  @author  Vaibhav P Khadake
+ *  @version 1.0
+ *  @since   29-08-2019
+ *
+ ******************************************************************************/
 package com.bridgelabzs.datastructure;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -56,6 +64,9 @@ public class Unorded_List<E>
 				 break;
 			 } 
 		  }	 
+		/**
+		 * Write a file elements.
+		 */
 		String s=ll.addToFile();
 		 FileWriter fw=new FileWriter(file);
 		 BufferedWriter bw= new BufferedWriter(fw);

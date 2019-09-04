@@ -19,7 +19,6 @@ public class QueueLogic <E>
 	int count,capacity;
 	int amount=100000;
 	
-	
 	 public QueueLogic(int size)
 	 {
 		array=new int[size];
@@ -28,24 +27,27 @@ public class QueueLogic <E>
 		count=0;
 		capacity=size;
 	 }
-	 
+	 //return size of array.
 	 public int size()
 		{
 			return count;
 		}
-	 
+	// Check queue empty or not.
 	 public Boolean isEmpty()
 		{
 			return (size() == 0);
 		}
 
-		
+	// Check queue is full or not.
 	public Boolean isFull()
 		{
 			return (size() == capacity);
 		}
 		
-		
+		/**
+		 * Insert element at rear end
+		 * @param newElement
+		 */
 	 public void enqueue(int newElement)
 	 {
 		 if(isFull())
@@ -60,6 +62,9 @@ public class QueueLogic <E>
 			 count++;
 		 }
 	 }
+	 /**
+	  * Delete element at fronr end.
+	  */
 	 public void dequeue()
 	 {
 
@@ -77,6 +82,9 @@ public class QueueLogic <E>
 				 System.out.println("Remove "+element);
 			 }
 	 }
+	 /**
+	  * Dispaly elemnet in array
+	  */
 	 public void display()
 	 {
 		 for (int i=front;i<=rear;i++)
@@ -84,6 +92,9 @@ public class QueueLogic <E>
 			 System.out.print(array[i%capacity]+" ");
 		 }
 	 }
+	 /**
+	  * Deposit cash in bank wallet
+	  */
 	public void deposite()
 	{
 		System.out.println("Enter amount to deposit");
@@ -94,6 +105,9 @@ public class QueueLogic <E>
 		 dequeue();
 		 display();
 	}
+	/***
+	 * Withdraw cash from bank wallet
+	 */
 	public void withdraw()
 	{
 		System.out.println("Enter amount to withdraw");
@@ -102,8 +116,5 @@ public class QueueLogic <E>
 		 System.out.println("Total amount is  "+amount);
 		 dequeue();
 		 display();
-	}
-	
-		
-		
+	}	
 }

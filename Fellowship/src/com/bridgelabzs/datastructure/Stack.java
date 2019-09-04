@@ -13,7 +13,7 @@ public class Stack
 	int[]stack=new int[50];
 	int top=0;
 	/**
-	 * 
+	 * Ckeck stack is empty or not
 	 * @return
 	 */
 	public boolean isEmpty()
@@ -22,7 +22,7 @@ public class Stack
 		return (top==0);
 	}
 	/**
-	 * 
+	 * Insert element at the top. 
 	 * @param data
 	 */
 	public void push(int data)
@@ -32,7 +32,7 @@ public class Stack
 		
 	}
 	/**
-	 * 
+	 * Delete the element at top of stack.
 	 * @return
 	 */
 	public int pop()
@@ -44,8 +44,8 @@ public class Stack
 		return data;
 	}
 	/**
-	 * 
-	 * @param ae
+	 * Check Balanced Parentheses or not.
+	 * @param 
 	 * @return
 	 */
 	public boolean check(String ae)
@@ -67,7 +67,7 @@ public class Stack
 		
 	}
 	/**
-	 * show stack elements
+	 * showing stack elements
 	 */
 	public void display() 
 	{

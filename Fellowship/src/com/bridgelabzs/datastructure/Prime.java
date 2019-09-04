@@ -1,3 +1,11 @@
+/******************************************************************************
+ *  
+ *  Purpose: check number is prime or not.
+ *  @author  Vaibhav P Khadake
+ *  @version 1.0
+ *  @since   30-08-2019
+ *
+ ******************************************************************************/
 package com.bridgelabzs.datastructure;
 
 public class Prime 

@@ -1,3 +1,11 @@
+/******************************************************************************
+ *  
+ *  Purpose: Write a program to perform Hashing concepts.
+ *  @author  Vaibhav P Khadake
+ *  @version 1.0
+ *  @since   3-09-2019
+ *
+ ******************************************************************************/
 package com.bridgelabzs.datastructure;
 
 public class Hashing<E> {
