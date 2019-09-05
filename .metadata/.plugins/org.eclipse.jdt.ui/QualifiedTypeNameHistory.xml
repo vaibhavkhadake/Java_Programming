@@ -30,4 +30,6 @@
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="com.bridgelabzs.utility.Utility"/>
     <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="org.json.JSONObject"/>
+    <fullyQualifiedTypeName name="com.bridgelabzs.OOPConcepts.Rejex"/>
 </qualifiedTypeNameHistroy>

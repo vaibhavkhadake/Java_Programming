@@ -1,0 +1,18 @@
+[
+
+ {"name" : "Mhasurdal" ,
+  "Price" : 50 , 
+  "weight" : 10
+ },
+ 
+ {"name" : "Turdal" ,
+  "Price" : 40 , 
+  "weight" : 20
+ },
+ 
+ {"name" : "HarbharaDal" , 
+ "Price" : 100 , 
+ "weight" : 50
+ }
+
+]

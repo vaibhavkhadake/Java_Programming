@@ -1,0 +1,18 @@
+[
+
+ {"name" : "Rajmoti" ,
+  "Price" : 50 , 
+  "weight" : 10
+ },
+ 
+ {"name" : "Rajbhog" ,
+  "Price" : 40 , 
+  "weight" : 20
+ },
+ 
+ {"name" : "Panjab National" , 
+ "Price" : 100 , 
+ "weight" : 50
+ }
+
+]
