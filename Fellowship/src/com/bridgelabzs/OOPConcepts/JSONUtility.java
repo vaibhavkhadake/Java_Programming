@@ -1,12 +1,16 @@
 package com.bridgelabzs.OOPConcepts;
 
-import org.codehaus.jackson.map.ObjectMapper;
+import org.json.JSONObject;
 
 public class JSONUtility
 {
-	private static ObjectMapper mapper;
+	public static void main(String[] args) 
 	{
-		mapper=new ObjectMapper();
+		String file="/home/user/Desktop/Vaibhav_VK/Fellowship/InventoryDetails.json";
+		
+		JSONObject obj=new JSONObject();
+		obj.put("Rice", )
+		
 	}
 
 }
