@@ -15,7 +15,7 @@ public class Node<E>
 	public Node next;
 	public Node prev;
 	
-	Node()
+	public Node()
 	{
 		//data=0;
 		//next=null;

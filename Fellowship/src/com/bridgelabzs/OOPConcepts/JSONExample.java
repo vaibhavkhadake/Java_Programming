@@ -26,8 +26,9 @@ public class JSONExample {
 			do
 			{
 				System.out.println("---------Inventory Details----------");
-				System.out.println("Enter your choice ");
+				
 				System.out.println("Press\n 1.Rice\t2.Pulse\t3.Wheats \n");
+				System.out.println("Enter your choice ");
 				choice=Utility.integerInput();
 				switch(choice)
 				{
@@ -44,22 +45,20 @@ public class JSONExample {
 					System.out.println("Please Enter valid choice");
 				}
 				//Searching String specific data
-			JsonNode inventry=node.get(product);
+			JsonNode inventry=node.findPath(product);
 			for(JsonNode jnode:inventry)
 			{
-				String product_name="";
-				int product_price=0;
-				int product_weight=0;
 				
-				product_name=jnode.get(product_name).asText();
-				product_weight=jnode.get(product_weight).asInt();
-				product_price=jnode.get(product_price).asInt();
+			String	product_name=jnode.findPath("Name").asText();
+			int	product_weight=jnode.findPath("Weight").asInt();
+			int	product_price=jnode.findPath("Price").asInt();
 				
-				System.out.println("Product Name		:"+product_name);
-				System.out.println("Product Weigth 		:"+product_weight);
-				System.out.println("Product Price per Kg:"+product_price);
+				System.out.println("Product Name			:"+product_name);
+				System.out.println("Product Weigth			:"+product_weight);
+				System.out.println("Product Price per Kg		:"+product_price);
 				double total_price=product_price*product_weight;
-				System.out.println("Product Final Price :"+total_price);
+				System.out.println("Product Final Price		:"+total_price);
+				System.out.println();
 			}
 			
 			}while(choice>4);
@@ -67,23 +66,6 @@ public class JSONExample {
 		{
 			System.out.println(e);
 		}
-		
-//		//JSON nn=mapper.
-//		JSONObject obj=new JSONObject();    
-//		  obj.put("Product name","Suraj");    
-//		  obj.put("product weight",10);    
-//		  obj.put("product price",500);    
-//		  System.out.print(obj);  
-//		JSONArray employeeList = new JSONArray();
-//        employeeList.add(employeeObject);
-//		 try (FileWriter file = new FileWriter("employees.json")) {
-//			 
-//	            file.write(employeeList.toJSONString());
-//	            file.flush();
-//	 
-//	        } catch (IOException e) {
-//	            e.printStackTrace();
-//	        }
 	}
 
 }

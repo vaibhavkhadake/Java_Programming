@@ -45,7 +45,7 @@ public class OrderedList <E>{
 			// ll.sort();
 			 if(ll.search(search))
 			 {
-				System.out.println("\nElement found"); 
+				System.out.println("\nElement found and deleted"); 
 				ll.delete(search);
 				ll.display();
 				break;

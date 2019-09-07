@@ -1,5 +1,5 @@
-[{"name":"vaibhav","weight":90,"price":1000000},
-{"name":"vaibhav2","weight":90,"price":1000000},
-{"name":"vaibhav3","weight":90,"price":1000000},
-{"name":"vaibhav4","weight":90,"price":1000000},
-{"name":"vaibhav5","weight":90,"price":1000000}]
+[
+{"Rice":[{"Name":"Indrayani","Weight":20,"Price":100}]},
+{"Pulse":[{"Name":"Mhasur","Weight":30,"Price":200}]},
+{"Wheats":[{"Name":"Rajbhog","Weight":50,"Price":300}]}
+]

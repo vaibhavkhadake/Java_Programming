@@ -13,7 +13,6 @@
     <fullyQualifiedTypeName name="com.bridgelabzs.datastructure.Unorded_List"/>
     <fullyQualifiedTypeName name="javax.naming.directory.SearchControls"/>
     <fullyQualifiedTypeName name="java.lang.String"/>
-    <fullyQualifiedTypeName name="java.io.FileWriter"/>
     <fullyQualifiedTypeName name="com.bridgelabzs.datastructure.Node"/>
     <fullyQualifiedTypeName name="com.bridgelabzs.datastructure.Linked_List"/>
     <fullyQualifiedTypeName name="com.bridgelabzs.datastructure.QueueLogic"/>
@@ -28,8 +27,14 @@
     <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="com.bridgelabzs.datastructure.BinaryTree"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
-    <fullyQualifiedTypeName name="com.bridgelabzs.utility.Utility"/>
     <fullyQualifiedTypeName name="java.time.LocalDate"/>
-    <fullyQualifiedTypeName name="org.json.JSONObject"/>
     <fullyQualifiedTypeName name="com.bridgelabzs.OOPConcepts.Rejex"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="java.text.DateFormat"/>
+    <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+    <fullyQualifiedTypeName name="com.bridgelabzs.utility.Utility"/>
+    <fullyQualifiedTypeName name="org.json.JSONArray"/>
+    <fullyQualifiedTypeName name="java.io.FileWriter"/>
+    <fullyQualifiedTypeName name="org.json.JSONObject"/>
+    <fullyQualifiedTypeName name="org.json.simple.JSONArray"/>
 </qualifiedTypeNameHistroy>

@@ -71,6 +71,7 @@ public class RegularExpression
 		}
 
 		LocalDate localDate = LocalDate.now();
+		//System.out.println(localDate);
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 		String formattedString = localDate.format(formatter);
 		string = string.replaceAll("01/01/2016", formattedString);
