@@ -1,3 +1,11 @@
+/******************************************************************************
+ *  
+ *  Purpose: Regular Expression replace specific data using given pattern.
+ *  @author  Vaibhav P Khadake
+ *  @version 1.0
+ *  @since   09/09/2019
+ *
+ ******************************************************************************/
 package com.bridgelabzs.OOPConcepts;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -54,7 +62,7 @@ public class RegularExpression
 		String lastName = Utility.stringInput();
 
 		String fullname = firstName + " " + lastName;
-
+		//pattern for  alphabets
 		Pattern r = Pattern.compile("[a-zA-Z]+");
 
 		if (r.matches("[a-zA-z]+", firstName))
@@ -64,12 +72,12 @@ public class RegularExpression
 		}
 		System.out.println("Enter the mobile number");
 		String mobileNo = Utility.stringInput();
-		
+		//Pattern for mobile number
 		if (Pattern.matches("[789][0-9]{9}", mobileNo))
 		{
 			string = string.replaceAll("x{10}", mobileNo);
 		}
-
+		//find the current date
 		LocalDate localDate = LocalDate.now();
 		//System.out.println(localDate);
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");

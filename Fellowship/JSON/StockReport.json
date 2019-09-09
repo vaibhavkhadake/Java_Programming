@@ -1,0 +1,5 @@
+{"Stock":
+[{"stockName":"Mahindra","numberOfShares":10,"sharePrice":40000},
+{"stockName":"Maruti","numberOfShares":20,"sharePrice":20000},
+{"stockName":"TVS","numberOfShares":30,"sharePrice":10000}]
+}

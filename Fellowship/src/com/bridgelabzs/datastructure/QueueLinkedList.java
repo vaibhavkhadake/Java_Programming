@@ -9,10 +9,10 @@ public class QueueLinkedList<T>
 	public Node <T> rear;
 	public int size=0;
 
-	public void enqueue(Object item)
+	public void enqueue(T item)
 	{
 	Node<T> newNode = new Node<T>();
-	newNode.data =  (T) item;
+	newNode.data =  item;
 	if(front == null)
 	{
 	front = rear = newNode;

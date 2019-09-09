@@ -1,3 +1,11 @@
+/******************************************************************************
+ *  
+ *  Purpose: Read JSON file
+ *  @author  Vaibhav P Khadake
+ *  @version 1.0
+ *  @since   09/09/2019
+ *
+ ******************************************************************************/
 package com.bridgelabzs.OOPConcepts;
 
 import java.io.File;
@@ -15,6 +23,7 @@ public class JSONExample {
 
 	public static void main(String[] args) throws JSONException 
 	{
+		//file path
 		File file=new File("/home/user/Desktop/Vaibhav_VK/Fellowship/InventoryDetails.json");
 		ObjectMapper mapper=new ObjectMapper();
 		int choice=0;
@@ -26,7 +35,6 @@ public class JSONExample {
 			do
 			{
 				System.out.println("---------Inventory Details----------");
-				
 				System.out.println("Press\n 1.Rice\t2.Pulse\t3.Wheats \n");
 				System.out.println("Enter your choice ");
 				choice=Utility.integerInput();
@@ -61,7 +69,7 @@ public class JSONExample {
 				System.out.println();
 			}
 			
-			}while(choice>4);
+			}while(choice<4);
 		}catch(Exception e)
 		{
 			System.out.println(e);

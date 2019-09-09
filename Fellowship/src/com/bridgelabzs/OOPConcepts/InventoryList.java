@@ -3,7 +3,7 @@ package com.bridgelabzs.OOPConcepts;
 import java.util.ArrayList;
 import java.util.List;
 
-public class InventoryList 
+public class InventoryList <T>
 {
 	private String inventoryName;
 	private List inventoryDetails=new ArrayList();
