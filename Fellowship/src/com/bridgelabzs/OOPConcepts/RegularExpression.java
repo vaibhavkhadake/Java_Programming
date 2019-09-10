@@ -24,6 +24,8 @@ public class RegularExpression
 
 
 	public void setFirstName(String firstName) {
+		System.out.println("Enter your first name");
+		firstName = Utility.stringInput();
 		this.firstName = firstName;
 	}
 
@@ -34,6 +36,8 @@ public class RegularExpression
 
 
 	public void setLastName(String lastName) {
+		System.out.println("Enter your last name");
+		lastName = Utility.stringInput();
 		this.lastName = lastName;
 	}
 
@@ -51,15 +55,17 @@ public class RegularExpression
 		@SuppressWarnings("static-access")
 		public static void main(String[] args) 
 		{
+			RegularExpression regularExpression=new RegularExpression();
 
 		String string = "Hello <<name>>, We have your full name as <<full name>> in our system. \n"
 					+ " * your contact number is 91-xxxxxxxxxx. Please,let us know in case of any clarification Thank you BridgeLabz \n"
 					+ " * 01/01/2016";
 
-		System.out.println("Enter your first name");
-		String firstName = Utility.stringInput();
-		System.out.println("Enter your last name");
-		String lastName = Utility.stringInput();
+		regularExpression.setFirstName(regularExpression.firstName);
+		regularExpression.setLastName(regularExpression.lastName);
+		String firstName=regularExpression.getFirstName();
+		String lastName=regularExpression.getLastName();
+		
 
 		String fullname = firstName + " " + lastName;
 		//pattern for  alphabets

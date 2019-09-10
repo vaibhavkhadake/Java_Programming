@@ -1,6 +1,10 @@
 package com.bridgelabzs.utility;
+import java.io.File;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
+
+import org.codehaus.jackson.map.ObjectMapper;
 
 import com.bridgelabzs.datastructure.Node;
 import com.bridgelabzs.datastructure.QueueLinkedList;
@@ -823,11 +827,23 @@ public class Utility {
 
 	}
 	}
-
-
 	return queue;
 	//stack.viewStack();
 
 
 	}	
+	
+	public static void writeObjectToJson(List list, String fileName)
+	{
+	Object[] array = list.toArray();
+
+	ObjectMapper mapper = new ObjectMapper();
+	try
+		{
+		mapper.writeValue(new File(fileName), array);
+		}
+	catch(Exception e) {
+	e.printStackTrace();
+	}
+	}
 }

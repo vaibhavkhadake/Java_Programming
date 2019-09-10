@@ -7,21 +7,46 @@ import java.io.IOException;
 import org.json.simple.JSONArray;  
 import org.json.simple.JSONObject;
 
-public class StockAccount {  
+import com.bridgelabzs.utility.Utility;
 
+public class StockAccount {  
+	private static int totalAmount=10000;
+	private int totalShare;
+	private int shareAmount;
+	
+	public static void buy()
+	{
+		System.out.println("Enter share amount");
+		int shareAmount=Utility.integerInput();
+		if(shareAmount<=totalAmount)
+		{
+			totalAmount=totalAmount-shareAmount;
+			System.out.println("Share Purchased Successfully");
+		}
+		else
+		{
+			System.out.println("You have insufficient balance to purchase share");
+		}
+	}
+	public static void sell()
+	{
+		
+	}
     public static void main(String[] args) {  
 
         JSONObject countryObj = new JSONObject();  
-        countryObj.put("Name", "India");  
-        countryObj.put("Population",1000000);  
+//        countryObj.put("Name", "India");  
+//        countryObj.put("Population",1000000);  
+//
+//        JSONArray listOfStates = new JSONArray();  
+//        listOfStates.add("Madhya Pradesh");  
+//        listOfStates.add("Maharastra");  
+//        listOfStates.add("Rajasthan");  
+//
+//        countryObj.put("States", listOfStates);  
 
-        JSONArray listOfStates = new JSONArray();  
-        listOfStates.add("Madhya Pradesh");  
-        listOfStates.add("Maharastra");  
-        listOfStates.add("Rajasthan");  
-
-        countryObj.put("States", listOfStates);  
-
+        
+        
         try {  
 
             // Writing to a file  
