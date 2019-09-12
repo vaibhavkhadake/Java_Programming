@@ -106,6 +106,7 @@ public class Commercial {
 				System.exit(0);
 				default:
 					System.out.println("Wrong Input");
+					break;
 			}
 		}while(choice<5);
 		

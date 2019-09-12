@@ -44,7 +44,11 @@ public class Utility {
 		double doubleValue= scanner.nextDouble();
 		return doubleValue;
 	}
-	
+	public static long longInput()
+	{
+		long longValue=scanner.nextLong();
+		return longValue;
+	}
 	/**
 	 * 
 	 * @return stringvalue
