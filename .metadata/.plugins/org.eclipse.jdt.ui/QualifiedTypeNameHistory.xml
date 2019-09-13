@@ -1,18 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.lang.System"/>
-    <fullyQualifiedTypeName name="com.bridgelabzs.datastructure.Deque"/>
-    <fullyQualifiedTypeName name="com.bridgelabzs.datastructure.HashingUtility"/>
-    <fullyQualifiedTypeName name="java.lang.Integer"/>
-    <fullyQualifiedTypeName name="com.bridgelabzs.datastructure.BinaryTree"/>
-    <fullyQualifiedTypeName name="java.time.LocalDate"/>
-    <fullyQualifiedTypeName name="com.bridgelabzs.OOPConcepts.Rejex"/>
-    <fullyQualifiedTypeName name="java.util.Date"/>
-    <fullyQualifiedTypeName name="java.text.DateFormat"/>
-    <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
-    <fullyQualifiedTypeName name="org.json.JSONObject"/>
-    <fullyQualifiedTypeName name="com.bridgelabzs.datastructure.StackAnagram"/>
-    <fullyQualifiedTypeName name="com.bridgelabzs.datastructure.StackLinkedList"/>
     <fullyQualifiedTypeName name="com.bridgelabzs.datastructure.Node"/>
     <fullyQualifiedTypeName name="org.json.simple.JSONArray"/>
     <fullyQualifiedTypeName name="com.bridgelabzs.OOPConcepts.Inventort2"/>
@@ -60,4 +47,17 @@
     <fullyQualifiedTypeName name="com.bridgelabzs.utility.Utility"/>
     <fullyQualifiedTypeName name="com.bridgelabzs.OOPConcepts.AddressBook.AddressBookImplementation"/>
     <fullyQualifiedTypeName name="com.bridgelabzs.OOPConcepts.AddressBook.JsonFileOperations"/>
+    <fullyQualifiedTypeName name="java.lang.RuntimeException"/>
+    <fullyQualifiedTypeName name="com.bridgelabzs.designpattern.StaticBlockSingletone"/>
+    <fullyQualifiedTypeName name="com.bridgelabzs.designpattern.LazySingletone"/>
+    <fullyQualifiedTypeName name="com.bridgelabzs.designpattern.ThreadSafeSingleton"/>
+    <fullyQualifiedTypeName name="com.bridgelabzs.designpattern.DoubleCheckingThreadSafeSingleton"/>
+    <fullyQualifiedTypeName name="com.bridgelabzs.designpattern.BillPughSingleton"/>
+    <fullyQualifiedTypeName name="com.bridgelabzs.designpattern.BillPughSingleton.BillPughHelper"/>
+    <fullyQualifiedTypeName name="java.lang.reflect.Constructor"/>
+    <fullyQualifiedTypeName name="com.bridgelabzs.designpattern.EgarInitilizationSingletone"/>
+    <fullyQualifiedTypeName name="com.bridgelabzs.designpattern.Factory.Computer"/>
+    <fullyQualifiedTypeName name="com.bridgelabzs.designpattern.Factory.PersonalComputer"/>
+    <fullyQualifiedTypeName name="com.bridgelabzs.designpattern.Factory.Laptop"/>
+    <fullyQualifiedTypeName name="com.bridgelabzs.designpattern.Factory.ComputerFactoryMain"/>
 </qualifiedTypeNameHistroy>
