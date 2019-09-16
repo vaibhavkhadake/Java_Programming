@@ -1,0 +1,12 @@
+[ {
+  "person" : {
+    "personFirstName" : "mohit",
+    "personLastName" : "bhosale",
+    "address" : {
+      "city" : "goa",
+      "state" : "goa",
+      "pincode" : 321456
+    },
+    "mobileNumber" : 9874561230
+  }
+} ]

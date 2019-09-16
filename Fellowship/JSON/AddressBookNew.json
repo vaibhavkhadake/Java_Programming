@@ -1,23 +1,12 @@
 [ {
   "person" : {
-    "personFirstName" : "qwer",
-    "personLastName" : "rty",
+    "personFirstName" : "vk",
+    "personLastName" : "kk",
     "address" : {
-      "city" : "zxc",
-      "state" : "wer",
-      "pincode" : 123789
+      "city" : "kol",
+      "state" : "mah",
+      "pincode" : 456123
     },
-    "mobileNumber" : 78945600
-  }
-}, {
-  "person" : {
-    "personFirstName" : "qwer",
-    "personLastName" : "rty",
-    "address" : {
-      "city" : "zxc",
-      "state" : "wer",
-      "pincode" : 123789
-    },
-    "mobileNumber" : 78945600
+    "mobileNumber" : 9854632141
   }
 } ]

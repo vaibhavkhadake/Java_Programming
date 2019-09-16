@@ -1,0 +1,12 @@
+[ {
+  "person" : {
+    "personFirstName" : "rohan",
+    "personLastName" : "kadam",
+    "mobileNumber" : 7894561230
+  },
+  "address" : {
+    "city" : "mumbai",
+    "state" : "mah",
+    "pincode" : 0
+  }
+} ]

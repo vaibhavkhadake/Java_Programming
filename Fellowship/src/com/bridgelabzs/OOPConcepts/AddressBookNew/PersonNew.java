@@ -6,19 +6,11 @@ public class PersonNew
 	Scanner scanner=new Scanner(System.in);
 	private String personFirstName;
 	private String personLastName;
-	private AddressNew address;
+	//private AddressNew address;
 	private long mobileNumber;
 	
 	
-	public AddressNew getAddress() {
-		return address;
-	}
-	public AddressNew setAddress(AddressNew address) {
-		address.setCity();
-		address.setState();
-		address.setPincode();
-		return this.address = address;
-	}
+	
 	public String getPersonFirstName() {
 		return personFirstName;
 	}
@@ -36,7 +28,15 @@ public class PersonNew
 		String personLastName=scanner.next();
 		this.personLastName = personLastName;
 	}
-	
+//	public AddressNew getAddress() {
+//		return address;
+//	}
+//	public void setAddress() {
+//		address.setCity();
+//		address.setState();
+//		address.setPincode();
+//		this.address = address;
+//	}
 	public long getMobileNumber() {
 		return mobileNumber;
 	}
@@ -49,7 +49,6 @@ public class PersonNew
 	
 	@Override
 	public String toString() {
-		return "PersonNew [personFirstName=" + personFirstName + ", personLastName=" + personLastName + ", address="
-				+ address + ", mobileNumber=" + mobileNumber + "]";
+		return "PersonNew [personFirstName=" + personFirstName + ", personLastName=" + personLastName + ", mobileNumber=" + mobileNumber + "]";
 	}
 }

@@ -7,7 +7,7 @@ public class AddressNew
 	Scanner scanner=new Scanner(System.in);
 	private String city;
 	private String state;
-	private int pincode;
+	private long pincode;
 	
 	public String getCity() {
 		return city;
@@ -27,12 +27,12 @@ public class AddressNew
 		String state=scanner.next();
 		this.state = state;
 	}
-	public int getPincode() {
+	public long getPincode() {
 		return pincode;
 	}
 	public void setPincode() {
-		System.out.println("Enter Pincode name");
-		int pincode=scanner.nextInt();
+		System.out.println("Enter Pincode number");
+		long pincode=scanner.nextLong();
 		this.pincode = pincode;
 	}
 	@Override

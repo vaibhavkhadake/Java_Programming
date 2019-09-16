@@ -1,0 +1,45 @@
+[ {
+  "person" : {
+    "personFirstName" : "sachin",
+    "personLastName" : "yadav",
+    "mobileNumber" : 7894561230
+  },
+  "address" : {
+    "city" : "sangli",
+    "state" : "mah",
+    "pincode" : 0
+  }
+}, {
+  "person" : {
+    "personFirstName" : "vaibhav",
+    "personLastName" : "khadake",
+    "mobileNumber" : 789456123
+  },
+  "address" : {
+    "city" : "kolhapur",
+    "state" : "mah",
+    "pincode" : 0
+  }
+}, {
+  "person" : {
+    "personFirstName" : "sagar",
+    "personLastName" : "mahajan",
+    "mobileNumber" : 4561230789
+  },
+  "address" : {
+    "city" : "ndb",
+    "state" : "mah",
+    "pincode" : 411111
+  }
+}, {
+  "person" : {
+    "personFirstName" : "suraj",
+    "personLastName" : "suraj",
+    "mobileNumber" : 7894561230
+  },
+  "address" : {
+    "city" : "kkk",
+    "state" : "jjkj",
+    "pincode" : 5454
+  }
+} ]

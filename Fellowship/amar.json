@@ -1,0 +1,12 @@
+[ {
+  "person" : {
+    "personFirstName" : "amar",
+    "personLastName" : "khade",
+    "mobileNumber" : 7894561230
+  },
+  "address" : {
+    "city" : "thane",
+    "state" : "goa",
+    "pincode" : 0
+  }
+} ]
