@@ -1,0 +1,11 @@
+[ {
+  "doctorName" : "suraj",
+  "doctorSpecialization" : "asdf",
+  "doctorID" : 102,
+  "doctorAvailabity" : "no"
+}, {
+  "doctorName" : "sharma",
+  "doctorSpecialization" : "heart",
+  "doctorID" : 10,
+  "doctorAvailabity" : "yes"
+} ]

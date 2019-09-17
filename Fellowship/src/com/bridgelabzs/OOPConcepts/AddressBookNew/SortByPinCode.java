@@ -1,32 +1,29 @@
 package com.bridgelabzs.OOPConcepts.AddressBookNew;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
 
-public class SortByPinCode implements Comparator<Object >
+import java.util.Comparator;
+
+
+public class SortByPinCode implements Comparator<AddressBookNew>
 {
 
-	List<AddressNew> list=new ArrayList<AddressNew>();
-	public int compare(AddressNew address1, AddressNew address2) 
+	
+	public int compare(AddressBookNew address1, AddressBookNew address2) 
 	{
-		if((address1.getPincode()) < (address2.getPincode()))
+		if((address1.address.getPincode()) < (address2.address.getPincode()))
 		{
 			return -1;
 		}
-		else if ((address1.getPincode()) > (address2.getPincode()))
+		else if((address1.address.getPincode()) > (address2.address.getPincode()))
 		{
 			return 1;
 		}
 		return 0;
 		
 	}
-	@Override
-	public int compare(Object arg0, Object arg1) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
+	
+	
+	
 
 
 }
