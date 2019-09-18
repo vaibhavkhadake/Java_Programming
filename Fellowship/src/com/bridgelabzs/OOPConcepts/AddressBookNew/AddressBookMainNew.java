@@ -88,10 +88,11 @@ public class AddressBookMainNew {
 				{
 				case 1:
 					Collections.sort(addressFileList, new  SortByPinCode() );
-					for(AddressBookNew an:addressFileList)
-					{
-					System.out.println(an);
-					}
+//					for(AddressBookNew an:addressFileList)
+//					{
+//					System.out.println(an);
+//					}
+					System.out.println(addressFileList);
 					break;
 				case 2:
 					Collections.sort(addressFileList, new  SortByFirstName() );

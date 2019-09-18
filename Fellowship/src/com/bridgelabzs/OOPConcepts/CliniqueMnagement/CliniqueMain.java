@@ -30,7 +30,7 @@ public class CliniqueMain {
 				System.out.println("Terminated............");
 				System.exit(0);
 			case 4:
-				//operations.searchByName();
+				operations.searchByName();
 				break;
 			default:
 				System.out.println("Wrong entry");

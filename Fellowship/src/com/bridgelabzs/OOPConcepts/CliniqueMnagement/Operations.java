@@ -19,6 +19,7 @@ import com.bridgelabzs.utility.Utility;
 
 public class Operations implements IClinique
 {
+	Scanner scanner=new Scanner(System.in);
 	static ObjectMapper mapper=new ObjectMapper();
 	Doctor doctorObject = new Doctor();
 	Patients patientsObject=new Patients();
@@ -73,26 +74,26 @@ public class Operations implements IClinique
 		// TODO Auto-generated method stub
 		
 	}
-//	public void searchByName() throws JsonParseException, JsonMappingException, IOException
-//	{
-//		System.out.println("Enter doctor name to search");
-//		//String doctorName=scanner.next();
-//		File doctorFile=new File("/home/user/Desktop/Vaibhav_VK/Fellowship/JSON/DoctorDetails.json");
-//		List<Doctor> doctorFileList = mapper.readValue(doctorFile, new TypeReference<List<Doctor>>() {});
-//		//doctorList.addAll(doctorFileList);
-//		
-//		for(Doctor doc:doctorFileList)
-//		{
-//		System.out.println(doc.getDoctorName());
-//		if(doc.getDoctorName().equalsIgnoreCase(doctorName))
-//		{
-//			System.out.println("Doctor is available");
-//		}
-//		}
-//		
-//		
-//		
-//	}
+	public void searchByName() throws JsonParseException, JsonMappingException, IOException
+	{
+		System.out.println("Enter doctor name to search");
+		String doctorName=scanner.next();
+		File doctorFile=new File("/home/user/Desktop/Vaibhav_VK/Fellowship/JSON/DoctorDetails.json");
+		List<Doctor> doctorFileList = mapper.readValue(doctorFile, new TypeReference<List<Doctor>>() {});
+		//doctorList.addAll(doctorFileList);
+		
+		for(Doctor doc:doctorFileList)
+		{
+		System.out.println(doc.getDoctorName());
+		if(doc.getDoctorName().equalsIgnoreCase(doctorName))
+		{
+			System.out.println("Doctor is available");
+		}
+		}
+		
+		
+		
+	}
 	
 	public <T>void writeToJsonFile(List<T> list,File file) throws JsonGenerationException, JsonMappingException, IOException
 	{
