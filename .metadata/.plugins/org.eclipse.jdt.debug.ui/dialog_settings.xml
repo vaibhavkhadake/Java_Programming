@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<item key="org.eclipse.jdt.debug.ui.jre_preference_page_context.columnWidth0" value="202"/>
+	<item key="org.eclipse.jdt.debug.ui.jre_preference_page_context.columnWidth1" value="249"/>
+	<item key="org.eclipse.jdt.debug.ui.jre_preference_page_context.columnWidth2" value="96"/>
+	<item key="org.eclipse.jdt.debug.ui.jre_preference_page_context.sortColumn" value="1"/>
 	<section name="org.eclipse.jdt.debug.ui.MAIN_METHOD_SELECTION_DIALOG">
 		<item key="ShowStatusLine" value="true"/>
 		<item key="History" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0A;&lt;History&gt;&#x0A;&lt;historyRootNode&gt;&#x0A;&lt;infoNode&gt;=Felloship/src&amp;lt;com.bridgelabzs.functional{CoupanNumber.java[CoupanNumber&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=Felloship/src&amp;lt;com.bridgelabzs.functional{Cubic_Running.java[Cubic_Running&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=src/&amp;lt;com.bridgelabz.functional{Distance.java[Distance&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=Fellowship/src&amp;lt;com.bridgelabzs.functional{PowerOf2.java[PowerOf2&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=Fellowship/src&amp;lt;com.bridgelabzs.functional{HarmonicNumber.java[HarmonicNumber&lt;/infoNode&gt;&#x0A;&lt;/historyRootNode&gt;&#x0A;&lt;/History&gt;"/>
