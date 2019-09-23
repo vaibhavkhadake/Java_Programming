@@ -68,4 +68,11 @@
 	</section>
 	<section name="BasicNewProjectResourceWizard">
 	</section>
+	<section name="CleanDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="435"/>
+		<item key="DIALOG_Y_ORIGIN" value="113"/>
+		<item key="DIALOG_WIDTH" value="569"/>
+		<item key="DIALOG_HEIGHT" value="421"/>
+		<item key="TOGGLE_SELECTED" value="false"/>
+	</section>
 </section>
