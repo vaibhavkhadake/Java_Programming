@@ -5,9 +5,11 @@
 <head>
 <meta charset="UTF-8">
 <title>Registration Details</title>
+<link rel="stylesheet" type="text/css" href="Style.css"/>
 </head>
 <body>
-<form action="Login" method="post">
+<h1>Registration Form</h1>
+<form action="RegistrationDetails" >
 <table border="5" >
 		<tr>
 			<th> FirstName </th>

@@ -1,7 +1,10 @@
 package com.demo;
 
 import java.io.IOException;
-
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -11,6 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.demo.dao.LoginDAO;
+import com.demo.dao.RegistrationDetailsDAO;
 
 /**
  * Servlet implementation class Login
@@ -20,52 +24,65 @@ public class Login extends HttpServlet {
 	
 	
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public Login() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
+	String url="jdbc:mysql://localhost:3306/Emp";
+	String databaseusername="root";
+	String databasepassword="password";
+	String sql="select * from RegistrationDetails where email = ?  and password = ? ";
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		//response.getWriter().append("Served at: ").append(request.getContextPath());
-	
-		LoginDAO dao=new LoginDAO();
-		String username=request.getParameter("username");
+		String email=request.getParameter("email");
 		String password=request.getParameter("password");
 		
-		try {
-			if(dao.checkDetails(username,password))
-			{
-				HttpSession session=request.getSession();
-				session.setAttribute("username", username);
-				response.sendRedirect("Registration.jsp");
-			}
-			else
-			{
-				//response.sendRedirect("Registration.jsp");
+		try
+		{
+				Class.forName("com.mysql.jdbc.Driver");  
+				Connection connection=DriverManager.getConnection("jdbc:mysql://localhost:3306/Emp","root","password");
+				PreparedStatement statement=connection.prepareStatement(sql);
+				
+				statement.setString(1, email);
+				statement.setString(2, password);
+				System.out.println(statement);
+				ResultSet resultSet=statement.executeQuery();
+				
+				while(resultSet.next())  
+				{
+					response.sendRedirect("Registration.jsp");
+					connection.close();
+					return;
+				}
+				
 				response.sendRedirect("Login.jsp");
-			}
+				return;
+				
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+				e.printStackTrace();
+			}finally {
+				
+				
+			}
+			
+	
 		}
-		
-		//System.out.println("Hello");
-	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
-	}
+		
+		
+//		
+//		try {
+//			if(dao.checkDetails(email,password))
+//			{
+//				HttpSession session=request.getSession();
+//				session.setAttribute("email", email);
+//				response.sendRedirect("Registration.jsp");
+//			}
+//			else
+//			{
+//				response.sendRedirect("Login.jsp");
+//			}
+//		} catch (Exception e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//		
+//	}
 
 }

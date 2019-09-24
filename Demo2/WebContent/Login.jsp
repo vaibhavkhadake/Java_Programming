@@ -5,23 +5,26 @@
 <head>
 <meta charset="UTF-8">
 <title>Login Page</title>
+<link rel="stylesheet" type="text/css" href="Style.css"/>
 </head>
 <body>
+<h1>Login Form</h1>
 <form action="Login">
+
 <table border="5" > 
-<tr> <td>UserName </td>
-	<td>
-		<input type="text" placeholder= "username" name= "username"></td></tr>
-<tr> <td>Password  </td>
-	<td>
-		<input type="password" placeholder="password" name="password"></td></tr>
-</table>
-<table>
-		<tr><td><input type="submit" value="Login"></td></tr>
+
+<lable>UserName:</lable>
+	
+		<input type="email" placeholder= "username" name= "email"/><br>
+<lable>Password:</lable>
+	
+		<input type="password" placeholder="password" name="password"/><br>
+
+		<input type="submit" value="Login"/>
 		
-		<tr><td>
-			<a href="Registration.jsp">Registration For new user</a>	
-		</td></tr>
+		
+			<a href="RegistrationDetails.jsp" value="Registration For new user">Registration For new user</a>	
+		
 </table>
 </form>
 
