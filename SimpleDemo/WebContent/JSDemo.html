@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Java Script</title>
+</head>
+<body>
+<h1>Welcome to login Page</h1>
+<form action="JSDemo" onsubmit="return validation()">
+UserName:<input type="text" value="" id="name"><span id="username"></span><br>
+Password:<input type="password" value="" id="pass"><span id="password"></span><br>
+	<input type="submit" value="Submit">
+</form>
+	
+	<script type="text/javascript">
+	
+	function validation()
+	{
+		var username=document.getElementById.("name").value;
+		var password=document.getElementById.("pass").value;
+		
+		if(username=="")
+		{
+			document.getElementById.("username").innerHTML="Please Fill user name";
+			return false;
+		}
+		if(password=="")
+		{
+			document.getElementById.("password").innerHTML="Please Fill user name";
+			return false;
+		}
+		else
+			{
+			alert("Login successfully");
+			return true;
+			}
+		
+	}
+	
+	</script>
+	
+	
+</body>
+</html>

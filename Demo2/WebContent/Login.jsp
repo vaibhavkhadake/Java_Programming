@@ -12,7 +12,6 @@
 <form action="Login">
 
 <table border="5" > 
-
 <lable>UserName:</lable>
 	
 		<input type="email" placeholder= "username" name= "email"/><br>
