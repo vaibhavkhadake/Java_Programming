@@ -9,10 +9,11 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet"type="text/css" href="Style.css"> 
 </head>
 <body>
-	Welcome to Bridge Labz
-	<table border="50">
+	Welcome to BridgeLabzs
+	<table>
 	<tr>
 	<th>Name</th>
 	<th>EmailID</th>
@@ -34,8 +35,7 @@
 	
 	<th><% out.println(u.getPassword());%></th>
 				
-	</tr>			
-				
+	</tr>				
 				
 		<% 	}
 	

@@ -26,8 +26,8 @@ public class RegisterUser extends HttpServlet
 		try 
 		{
 			Class.forName("com.mysql.jdbc.Driver");
-			Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/Demo","root","password");
-			PreparedStatement statement = connection.prepareStatement("insert into User"
+			Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/Emp","root","password");
+			PreparedStatement statement = connection.prepareStatement("insert into User2"
 					+ "(userName, userMailID, userContact, password)values(?, ?, ?, ?)");
 			statement.setString(1, userName);
 			statement.setString(2, mailID);
@@ -35,9 +35,7 @@ public class RegisterUser extends HttpServlet
 			statement.setString(4, password);
 			statement.executeUpdate();
 			connection.close();
-			response.sendRedirect("FirstPage.jsp");
-			
-			
+			response.sendRedirect("FirstPage.jsp");	
 		}
 		
 		catch (ClassNotFoundException e) 

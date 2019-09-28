@@ -763,6 +763,7 @@ public class Utility {
 		//stack.viewStack();
 	}
 /***************************************************************************************************/
+	@SuppressWarnings("unchecked")
 	public static QueueLinkedList anagramToQueue()
 	{
 	QueueLinkedList queue = new QueueLinkedList();

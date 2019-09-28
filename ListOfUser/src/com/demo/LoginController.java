@@ -38,44 +38,44 @@ public class LoginController extends HttpServlet
 			Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/Emp","root","password");
 			
 			PreparedStatement prepaStatement = connection.prepareStatement("select * from User2 where userName = ? and password = ?");
-			
+			System.out.println(prepaStatement);
+			System.out.println(connection);
 			prepaStatement.setString(1, userName);
+			System.out.println(prepaStatement);
 			prepaStatement.setString(2, password);
-			
+			System.out.println(prepaStatement);
 			ResultSet result = prepaStatement.executeQuery();
 			
 			while(result.next())
 			{
 				System.out.println("User Present");
 				PreparedStatement prepaStmtAll = connection.prepareStatement("select * from User2 ");
-				
-				 
-				
 				ResultSet rs = prepaStmtAll.executeQuery();
-
-				
-				
 				while(rs.next())
 				{
 					PrintWriter write = response.getWriter();
 					write.println("Name : "+rs.getString(1));
 					write.println("Email : "+rs.getString(2));
 					write.println("Mobile : "+rs.getString(3));
+					
 					String name = rs.getString(1);
 					String mail = rs.getString(2);
 					String mobile = rs.getString(3);
 					String pass = rs.getString(4);
+					
 					u= new Users();
 					u.setUserName(name);
+					System.out.println(u.getUserName());
 					u.setMailID(mail);
+					System.out.println(u.getMailID());
 					u.setMobileNumber(mobile);
+					System.out.println(u.getMobileNumber());
 					u.setPassword(pass);
+					System.out.println(u.getPassword());
 					userList.add(u);
-					
+					System.out.println("list"+userList);
 				}
-							
-						
-		
+							 
 				break;
 			}
 			
@@ -86,7 +86,7 @@ public class LoginController extends HttpServlet
 				System.out.println("Mobile = "+u1.getMobileNumber());
 				System.out.println("Password = "+u1.getPassword());
 			}
-			
+			System.out.println(userList);
 			request.setAttribute("userList", userList);
 			RequestDispatcher dis = request.getRequestDispatcher("success.jsp");
 			dis.forward(request, response);
